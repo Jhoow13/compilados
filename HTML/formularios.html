@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>    
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Catamaran');
+        .container{
+            max-width: 960px;
+            border: 1px solid #000;
+            margin:0 auto;
+            padding:25px;
+        }
+        .texto{
+            font-family: 'Catamaran', sans-serif;
+        }
+        .texto-centro{
+            text-align: center;
+        }
+
+        .width100{
+            width: 100%;
+        }
+
+        .posAbsolute{
+            position: absolute;
+        }
+
+        .label-em-bloco {            
+            display: inline-block;            
+        }
+
+        .input-em-bloco{
+            display: block;            
+        }
+                
+        .radio-inline {
+            position: relative;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body class="texto">
+    <div class="container">
+        <h1 class="texto-centro">Formulario Teste Inputs</h1>
+        <form>            
+            <div>
+                <label class="label-em-bloco" for="txtNome">Input Text</label>
+                <input class="input-em-bloco" type="text" name="txtNome" id="txtNome" value="Valor Padrão">
+            </div>
+
+            <div>
+                <label class="label-em-bloco" for="txtEmail">Input Email</label>
+                <input class="input-em-bloco width100" type="email" name="txtEmail" id="txtEmail">
+            </div>
+
+            <div>
+                <label class="label-em-bloco" for="txtSenha">Input Password</label>
+                <input class="input-em-bloco" type="password" name="txtSenha" id="txtSenha">
+            </div>
+
+            <div class="radio-inline">
+                <label for="rdnFeminino">
+                    <input class="" type="radio" name="sexo" id="rdnFeminino" value="Feminino" checked>
+                    Input Radio 1
+                </label>
+            </div>
+
+            <div class="radio-inline">
+                <label for="rdnMasculino">
+                    <input type="radio" name="sexo" id="rdnMasculino" value="Masculino">
+                    Input Radio 2
+                </label>                
+            </div>
+
+            <div>
+                <label for="chkItem1">Input Check 1
+                    <input type="checkbox" name="tipoItem" id="chkItem1" value="Item1">
+                </label>
+            </div
+            >
+            <div>    
+                <label for="chkItem2">Input Check 2
+                    <input type="checkbox" name="tipoItem" id="chkItem2" value="Item2">
+                </label>
+                
+            </div>
+
+            <div>
+                <label for="color">Input Color</label>
+                <input type="Color" name="color" id="color">
+            </div>
+            
+            <div>
+                <label for="txtNumero">Input Number</label>
+                <input type="number" name="txtNumero" id="txtNumero">
+            </div>
+
+            <div>
+                <label for="dateDataNascimento">Input Date</label>
+                <input type="date" name="dateDataNascimento" id="dateDataNascimento">
+            </div>
+
+            <div>
+                <label for="monthMesInicio">Input Month</label>
+                <input type="month" name="monthMesInicio" id="monthMesInicio">
+            </div>
+
+            <div>
+                <label for="rgnValorRange">Input Range</label>
+                <input type="range" name="rgnValorRange" id="rgnValorRange" min="10" max="100" step="10" onchange="atualizaValorRange(this.value);">
+                <input type="text" id="txtValorRange" name="txtValorRange">
+            </div>
+
+            <div>
+                <label for="txtBusca">Input Search</label>
+                <input type="search" name="txtBusca" id="txtBusca">
+            </div>
+
+            <div>
+                <label for="telTelefone">Input Tel</label>
+                <input type="tel" name="telTelefone" id="telTelefone">
+            </div>
+
+            <div>
+                <label for="timeHora">Input Time</label>
+                <input type="time" name="timeHora" id="timeHora">
+            </div>            
+
+            <div>
+                <label for="urlInput">Input Url</label>
+                <input type="url" name="urlInput" id="urlInput">
+            </div>
+
+            <div>
+                <label for="weekInput">Input Week</label>
+                <input type="week" name="weekInput" id="weekInput">
+            </div>
+            
+            <div>
+                <label for="txtDefault">Default</label>
+                <input type="text" name="txtDefault" id="txtDefault">
+            </div>
+            
+            <input type="reset">
+            <input type="submit" name="" value="submit">
+        </form>
+        
+
+    </div>
+</body>
+<script>
+    function atualizaValorRange(valor){
+        document.getElementById('txtValorRange').value = valor;        
+    }
+</script>
+</html>

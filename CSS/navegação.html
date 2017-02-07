@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0
+		}
+
+		body{
+			background-color: #ddd;
+			font-family: 'Arial';
+		}
+
+		.nav_tabs{
+			width: 600px;
+			height: 400px;
+			margin: 100px auto;
+			background-color: #fff;
+			position: relative;			
+		}
+
+		.nav_tabs ul{
+			list-style: none;
+		}
+
+		.nav_tabs ul li{
+			float: left;
+		}
+
+		.nav_tabs label{
+			width: 100px;
+			padding: 25px;
+			background-color: #363b48;
+			display: block;
+			color: #fff;
+			cursor: pointer;
+			text-align: center;		
+		}
+
+		.rd_tabs:checked ~ label{
+			background-color: #e54e43;
+			transition: 1s ease;
+		}
+
+		.rd_tabs{
+			display: none;			
+		}
+
+		.content{
+			border-top: 5px solid #e54e43;
+			background-color: #fff;
+			display: none;
+			position: absolute;
+			height: 320px;
+			width: 600px;
+			left: 0;
+		}
+
+		.rd_tabs:checked ~ .content{
+			display: block;
+		}
+
+		.content article{
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<nav class="nav_tabs">
+		<ul>
+			<li>
+				<input type="radio" name="tabs" class="rd_tabs" id="tab1"
+				checked>
+				<label for="tab1">Tab 1</label>
+				<div class="content">
+				<article>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, maxime, illo! Ab ratione distinctio, cumque neque nobis minima officiis magnam, aliquam accusamus molestiae optio nam assumenda sit asperiores animi reprehenderit.</article>
+				</div>
+			</li>
+
+			<li>
+				<input type="radio" name="tabs" class="rd_tabs" id="tab2">
+				<label for="tab2">Tab 2</label>
+				<div class="content">
+					<article>Lorem ipsum.</article>
+				</div>
+			</li>
+
+			<li>
+				<input type="radio" name="tabs" class="rd_tabs" id="tab3">
+				<label for="tab3">Tab 3</label>
+				<div class="content">					
+					<article>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eos qui consectetur, aut officiis obcaecati ipsum harum ipsam aliquid eveniet quidem odio earum, quibusdam consequuntur placeat delectus in rem minus quos illo expedita neque, dolore ut. Accusantium, 
+					</article>
+				</div>
+			</li>
+
+			<li>
+				<input type="radio" name="tabs" class="rd_tabs" id="tab4">
+				<label for="tab4">Tab 4</label>
+				<div class="content">
+					<article>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam soluta, eius dicta quibusdam corporis dolores!
+					</article>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

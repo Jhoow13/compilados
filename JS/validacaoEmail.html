@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Validação email</title>
+    <style>
+        body{
+            margin: auto;
+            padding: 50px;            
+            height: 750px;
+            font-family: sans-serif;            
+        }
+        input{
+           border-radius: 2px;           
+           border: none;
+           outline: none;
+           border-bottom: 1px solid #ccc;
+           font-family: sans-serif;
+        }
+
+        input:focus{
+            border-bottom:1px solid #000;
+             
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label style="display: inline-block; margin-bottom:5px;" for="txtEmail">Input Email</label>
+        <input style="display:block; width:75%; margin-top:5px;" onblur="teste()" type="email" name="txtEmail" id="txtEmail">
+    </div>
+</body>
+<script>
+
+    function teste(){
+	//var email = document.getElementById('txtEmail').value;
+    var email = document.querySelector('input').value;
+    console.log(email);
+	// var email = "teste@algo.com";
+	var emailTamanho = email.length;
+	var teste1 = email.indexOf("@");
+	var teste2 = email.indexOf(".com");
+	var teste3 = email.substr(teste1+1, teste2);
+
+	console.log(teste3);
+
+	if (email.includes('@') && email.includes('.com') && (email.toLowerCase().endsWith('.com') || email.toLowerCase().endsWith('.com.br'))){
+		console.log('email valido')
+	}
+	else{
+		console.log('email invalido')	
+	}
+}
+
+
+</script>
+</html>

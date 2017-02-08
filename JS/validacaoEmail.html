@@ -41,15 +41,20 @@
     var email = document.querySelector('input').value;    
     var errorMessage = document.querySelector('#errorMessage');
 
-	if (email.includes('@') && email.includes('.com') && (email.toLowerCase().endsWith('.com') || email.toLowerCase().endsWith('.com.br'))){		
-        errorMessage.innerHTML = "";        
+    if(email.indexOf('@') > 0){
+        console.log("Posição do caracter @: " + email.indexOf('@'));
+        console.log("Substring do inicio ate a posição do caracter @: " + email.substring(0, email.indexOf('@')).length);
+        console.log("Substring do após posição do caracter @ ate o fim: " + email.substring(email.indexOf('@') + 1, email.length).length);
+    }
+
+
+	if (email.indexOf('@') > 0 && email.substring(0, email.indexOf('@')).length >= 2 && email.substring(email.indexOf('@') + 1, email.length).length >= 3){		
+        errorMessage.innerHTML = "";
 	}
 	else{
         errorMessage.innerHTML = "email " +email+" incorreto. Favor digitar no formato: email@exemplo.com ";
         
 	}
 }
-
-
 </script>
 </html>

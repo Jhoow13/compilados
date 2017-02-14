@@ -11,6 +11,6 @@ Exemplos e anotações gerais
 [//]: <> (This is also a comment.)
 [//]: # (This may be the most platform independent comment)
 
-
+[//]: # teste
 <!-- regular html comment --> 
 <!--- special completely ignored comment --> 

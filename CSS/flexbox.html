@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <style>
+        #div1 ul{            
+            list-style: none;
+            border: 1px solid #000;
+            display: flex; /* ou inline-flex; */
+            /*flex-direction: row;
+            flex-wrap: wrap;*/
+            flex-flow: row wrap;
+        }
+        #div1 ul li{
+            width: 100px;
+            height: 100px;
+            background-color: #8cacea;
+            margin: 8px;
+            text-align: center;
+            color: #fff;
+        }
+
+        #div2 ul {
+            border: 1px solid red;
+            padding: 0;
+            list-style: none;
+            background-color: #e8e8e9;
+            display: flex;            
+            justify-content: space-between;
+        }
+        #div2 ul li {
+            background-color: #8cacea;
+            width: 100px;
+            height: 100px;
+            margin: 8px;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <ul> <!-- Elemento Pai -->
+            <li>1</li> <!-- Filho 1-->
+            <li>2</li> <!-- Filho 2 -->
+            <li>3</li> <!-- Filho 3-->
+            <li>4</li> 
+            <li>5</li> 
+            <li>6</li> 
+            <li>7</li> 
+            <li>8</li> 
+            <li>9</li> 
+            <li>10</li>         
+        </ul>
+    </div>
+    <div id="div2">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>            
+        </ul>
+    </div>
+</body>
+</html>

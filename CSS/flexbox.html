@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Flexbox</title>
     <style>
+        /*https://medium.freecodecamp.com/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af#.s550icgpe*/
         #div1 ul{            
             list-style: none;
             border: 1px solid #000;
@@ -23,18 +24,25 @@
 
         #div2 ul {
             border: 1px solid red;
-            padding: 0;
             list-style: none;
+            height: 400px;         
+            padding: 0;
             background-color: #e8e8e9;
-            display: flex;            
-            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            /*align-content: center;*/
         }
         #div2 ul li {
             background-color: #8cacea;
             width: 100px;
-            height: 100px;
             margin: 8px;
-            padding: 4px;
+            padding: 4px;            
+        }
+
+        #div2 ul li:not(:first-child){
+            font-size: 26px;
         }
     </style>
 </head>
@@ -55,15 +63,14 @@
     </div>
     <div id="div2">
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>            
+            <li>item 1</li>
+            <li>item lista 2</li>
+            <li>item lista 3</li>
+            <li>item lista 4</li>
+            <li>item lista 5</li>
+            <li>item lista 6</li>
+            <li>item lista 7</li>
+            <li>item lista 8</li>
         </ul>
     </div>
 </body>

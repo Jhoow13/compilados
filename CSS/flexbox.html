@@ -25,7 +25,7 @@
         #div2 ul {
             border: 1px solid red;
             list-style: none;
-            height: 400px;         
+            /*height: 400px;         */
             padding: 0;
             background-color: #e8e8e9;
             display: flex;
@@ -44,9 +44,34 @@
         #div2 ul li:not(:first-child){
             font-size: 26px;
         }
+
+        #div3 ul {
+            border: 1px solid red;
+            list-style: none;            
+            padding: 0;
+            background-color: #e8e8e9;
+            display: flex;
+        }
+        #div3 ul li {
+            background-color: #8cacea;            
+            height: 100px;
+            margin: 8px;
+            padding: 4px;
+            color:#fff;
+            font-size: 14px;
+            /*flex:0 1 auto; ou default*/
+            /*flex:0 0 auto; ou none*/
+            flex: 1 1 auto; /*ou auto*/
+        }        
+
+        #div3 ul li:nth-child(1){
+            /*order:1;
+            flex-grow: 1;*/ 
+        }
+
     </style>
 </head>
-<body>
+<body>    
     <div id="div1">
         <ul> <!-- Elemento Pai -->
             <li>1</li> <!-- Filho 1-->
@@ -61,6 +86,7 @@
             <li>10</li>         
         </ul>
     </div>
+
     <div id="div2">
         <ul>
             <li>item 1</li>
@@ -71,6 +97,13 @@
             <li>item lista 6</li>
             <li>item lista 7</li>
             <li>item lista 8</li>
+        </ul>
+    </div>
+
+    <div id="div3">
+        <ul>
+            <li>I am a simple list</li>            
+            <li>I am a simple list and this is patrick</li>            
         </ul>
     </div>
 </body>

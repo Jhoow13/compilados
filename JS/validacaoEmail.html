@@ -41,18 +41,23 @@
     var email = document.querySelector('input').value;    
     var errorMessage = document.querySelector('#errorMessage');
 
-    if(email.indexOf('@') > 0){
+    if(email.indexOf('@') >= 2 && email.indexOf('.') >= 5 && email.length >= 8){        
         console.log("Posição do caracter @: " + email.indexOf('@'));
-        console.log("Substring do inicio ate a posição do caracter @: " + email.substring(0, email.indexOf('@')).length);
-        console.log("Substring do após posição do caracter @ ate o fim: " + email.substring(email.indexOf('@') + 1, email.length).length);
+        console.log("Substring do inicio ate a posição do caracter @: " + email.substring(0, email.indexOf('@')));
+        console.log("Substring do após posição do caracter @ ate o fim: " + email.substring(email.indexOf('@') + 1, email.indexOf('.')));
+        console.log("Substring do após posição do 1º caracter . ate o fim: " + email.substring(email.indexOf('.') + 1, email.length));
     }
 
 
-	if (email.indexOf('@') > 0 && email.substring(0, email.indexOf('@')).length >= 2 && email.substring(email.indexOf('@') + 1, email.length).length >= 3){		
+	if (email.indexOf('@') > 0 && 
+        email.substring(0, email.indexOf('@')).length >= 2 && 
+        email.substring(email.indexOf('@'), email.indexOf('.')).length > 2 &&
+        email.substring(email.indexOf('.') + 1, email.length).length >= 2){
+        
         errorMessage.innerHTML = "";
 	}
 	else{
-        errorMessage.innerHTML = "email " +email+" incorreto. Favor digitar no formato: email@exemplo.com ";
+        errorMessage.innerHTML = "email " +email+" incorreto. Exemplo: aa@bb.cc ";
         
 	}
 }

@@ -10,23 +10,23 @@
 
     .flex-grid{
         display: flex;
-        flex-flow: row wrap;        
+        flex-flow: row wrap;
+        padding: 0 15px;
+        
     }
 
-    header{              
-        border: 1px solid #000;
-        width: 100%;
+    header{        
+        width: 100%;       
+        box-shadow: 0 1px 4px 0 rgba(99,114,130,0.15);
     }
 
     ul{        
-        height: 150px;
-        background-color: #fff;                
+        height: 80px;
+        background-color: #fff;
     }
 
     ul li{
-        font-size: 14px;        
-        border: 1px solid #000;
-        /*background-color: #8cacea;*/
+        font-size: 14px;
         margin: 8px;
         text-align: center;
         color: #000;
@@ -37,6 +37,18 @@
     header button{
         width: 170px;
         height: 30px;
+    }
+
+    main section{
+        width: 100%;
+        height: 660px;
+        background-image: url('bg-dropbox.jpg');
+        background-repeat: no-repeat;
+        background-color: #e3eefc;
+        position: absolute;
+        left: 0;
+        margin-left: 0;
+        background-position: right center;
     }
 </style>
 <body>
@@ -51,10 +63,13 @@
                 <li>Recursos</li>
                 <li>Saiba Mais</li>
                 <li>Fale com a equipe de vendas</li>
+                <li><button>Avaliação Gratis - 30 dias</button></li>
             </ul>
-        
-
-        <button>Avaliação Gratis - 30 dias</button>
     </header>
+    <main>
+        <section>
+
+        </section>
+    </main>
 </body>
 </html>

@@ -3,52 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Fundo DropBox</title>
-    <!--<link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">-->
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
 </head>
 <style>
     html{font-family: sans-serif;}
-    header{
+
+    .flex-grid{
         display: flex;
-        flex-flow: wrap;        
+        flex-flow: row wrap;        
+    }
+
+    header{              
         border: 1px solid #000;
         width: 100%;
     }
 
-    nav{        
+    ul{        
         height: 150px;
-        background-color: #fff;
-                
+        background-color: #fff;                
     }
-    nav ul{
-        list-style: none;        
-    }
-    nav ul li{
+
+    ul li{
         font-size: 14px;        
         border: 1px solid #000;
         /*background-color: #8cacea;*/
         margin: 8px;
         text-align: center;
         color: #000;
+        width: 125px;
+        height: 30px;
+    }
+
+    header button{
+        width: 170px;
+        height: 30px;
     }
 </style>
 <body>
-    <header>
-        <nav>
-            <div>
-                <img src="https://www.dropbox.com/static/images/arbor/logos/glyph-vflcdYk8V.svg" alt="">
-                <img src="https://www.dropbox.com/static/images/arbor/logos/wordmark--business-vfl9WSvMr.svg" alt="">
-            </div>
-
-            <ul>
+    <header class="flex-grid">
+        <div>
+            <img src="https://www.dropbox.com/static/images/arbor/logos/glyph-vflcdYk8V.svg" alt="">
+            <img src="https://www.dropbox.com/static/images/arbor/logos/wordmark--business-vfl9WSvMr.svg" alt="">
+        </div>
+            <ul class="flex-grid">
                 <li>Preços</li>
                 <li>Compare os planos</li>
                 <li>Recursos</li>
                 <li>Saiba Mais</li>
                 <li>Fale com a equipe de vendas</li>
             </ul>
+        
 
-            <button>Avaliação Gratis - 30 dias</button>
-        </nav>
+        <button>Avaliação Gratis - 30 dias</button>
     </header>
 </body>
 </html>

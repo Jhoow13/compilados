@@ -6,36 +6,55 @@
     <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
 </head>
 <style>
-    nav{        
-        height: 150px;
-        background-color: #fff;
-        border: 1px solid #000;
-    }
-    nav ul{
-        list-style: none;
+    html{font-family: sans-serif;}
+
+    .flex-grid{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row wrap;        
     }
-    nav ul li{
-        width: 100px;
-        height: 100px;
-        background-color: #8cacea;
+
+    header{              
+        border: 1px solid #000;
+        width: 100%;
+    }
+
+    ul{        
+        height: 150px;
+        background-color: #fff;                
+    }
+
+    ul li{
+        font-size: 14px;        
+        border: 1px solid #000;
+        /*background-color: #8cacea;*/
         margin: 8px;
         text-align: center;
-        color: #fff;
+        color: #000;
+        width: 125px;
+        height: 30px;
+    }
+
+    header button{
+        width: 170px;
+        height: 30px;
     }
 </style>
 <body>
-    <nav>
-        <ul>
-            <li>teste</li>
-            <li>teste</li>
-            <li>teste</li>
-            <li>teste</li>
-            <li>teste</li>
-            <li>teste</li>
-            <li>teste</li>
-        </ul>
-    </nav>
+    <header class="flex-grid">
+        <div>
+            <img src="https://www.dropbox.com/static/images/arbor/logos/glyph-vflcdYk8V.svg" alt="">
+            <img src="https://www.dropbox.com/static/images/arbor/logos/wordmark--business-vfl9WSvMr.svg" alt="">
+        </div>
+            <ul class="flex-grid">
+                <li>Preços</li>
+                <li>Compare os planos</li>
+                <li>Recursos</li>
+                <li>Saiba Mais</li>
+                <li>Fale com a equipe de vendas</li>
+            </ul>
+        
+
+        <button>Avaliação Gratis - 30 dias</button>
+    </header>
 </body>
 </html>

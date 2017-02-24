@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Fundo DropBox</title>
+    <title>Hero Section DropBox</title>
     <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
 </head>
 <style>
@@ -15,20 +15,21 @@
         
     }
 
-    .header-cont {
+    /*.header-cont {
         width:100%;
-        position:fixed;
         top:0px;
-    }
+    }*/
 
     header{        
         width: 100%;       
         box-shadow: 0 1px 4px 0 rgba(99,114,130,0.15);
+        position:fixed;
+        z-index: 1;
+        background-color: #fff;
     }
 
     ul{        
         height: 80px;
-        background-color: #fff;
     }
 
     ul li{
@@ -54,6 +55,12 @@
         left: 0;
         margin-left: 0;
         background-position: right center;
+        position: relative;
+        top:80px;
+        z-index: 0;
+    }
+    main section h1{
+        font-size: 30px;
     }
     main p{
         justify-content: center;
@@ -77,7 +84,10 @@
     </header>
     
     <main>
-        <section></section>
+        <section>
+            <h1>Compartilhe, sincronize e colabore com segurança</h1>
+            O Dropbox Business é a solução segura para compartilhamento e armazenamento de arquivos que já conquistou os funcionários e a confiança dos administradores de TI.
+        </section>
         <p class="flex-grid">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio similique dignissimos, enim tempore alias minus soluta ea dolor dicta. Blanditiis perspiciatis, mollitia beatae quaerat? Laudantium suscipit repellat ipsum, modi cumque.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus alias quasi nemo eligendi debitis id consequuntur perspiciatis architecto, asperiores quia ut, iusto. Libero obcaecati, rem vel nam recusandae molestiae quisquam.
@@ -94,6 +104,7 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio similique dignissimos, enim tempore alias minus soluta ea dolor dicta. Blanditiis perspiciatis, mollitia beatae quaerat? Laudantium suscipit repellat ipsum, modi cumque.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus alias quasi nemo eligendi debitis id consequuntur perspiciatis architecto, asperiores quia ut, iusto. Libero obcaecati, rem vel nam recusandae molestiae quisquam.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut vel pariatur voluptatum ducimus quos necessitatibus natus facere debitis, harum totam qui inventore vero alias atque eaque magni quisquam, sequi quas.
+            
         </p>
     </main>
 </body>

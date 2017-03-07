@@ -23,9 +23,9 @@
     <input type="text" id="tipoTema">
     <input type="button" onclick="addTema()" value="Adicionar na lista">
     <input type="button" onclick="geraCards()" value="Gerar Cards">
+    <div id="listaCartas" class="containerFlex"></div>
 </body>
-<script>
-    // var temas = ['Maçã', 'Futebol', 'Pato', 'Cidade', 'Cerveja'];
+<script>    
     var temas = [];
     var temas2 = [];
 
@@ -44,22 +44,16 @@
     }
 
     function geraCards(){        
-        var divCards = document.createElement("div");
-        divCards.className="containerFlex";
 
-        temas2.forEach(function(palavra){            
-            var cards = document.createElement("div");
-            var texto = document.createTextNode(palavra);
-            cards.appendChild(texto);
-            divCards.appendChild(cards);
-            cards.className = "cards";
-        });
+        if(temas2.length > 0){
 
-        if(!divCards){
-            document.body.replaceChild(divCards, divCards);
-        }else{
-            document.body.appendChild(divCards);
-        };
+                var cards = document.createElement("div");
+                var texto = document.createTextNode(temas2[temas2.length-1]);
+                cards.appendChild(texto);
+                document.querySelector("#listaCartas").appendChild(cards);
+                cards.className = "cards";
+            
+        }else{alert("Sua lista está vazia")}
         
     }
     

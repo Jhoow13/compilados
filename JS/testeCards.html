@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Sneak</title>
+</head>
+<style>
+    .containerFlex{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;        
+        margin: 5px;
+    }
+
+    .cards{
+        width: 175px;
+        height: 150px;
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    <ul id="listaPalavras"></ul>
+    <input type="text" id="tipoTema">
+    <input type="button" onclick="addTema()" value="Adicionar na lista">
+    <input type="button" onclick="geraCards()" value="Gerar Cards">
+</body>
+<script>
+    // var temas = ['Maçã', 'Futebol', 'Pato', 'Cidade', 'Cerveja'];
+    var temas = [];
+    var temas2 = [];
+
+    function addTema(){
+        var nomeTema = document.querySelector("#tipoTema").value;
+        
+        if(nomeTema){
+            var itemLista = document.createElement("li");
+            itemLista.appendChild(document.createTextNode(nomeTema));
+            document.querySelector("#listaPalavras").appendChild(itemLista);
+            document.querySelector("#tipoTema").focus();
+             
+            temas2.push(nomeTema);
+            
+        }else{alert("Preencha um tema");}   
+    }
+
+    function geraCards(){        
+        var divCards = document.createElement("div");
+        divCards.className="containerFlex";
+
+        temas2.forEach(function(palavra){            
+            var cards = document.createElement("div");
+            var texto = document.createTextNode(palavra);
+            cards.appendChild(texto);
+            divCards.appendChild(cards);
+            cards.className = "cards";
+        });
+
+        if(!divCards){
+            document.body.replaceChild(divCards, divCards);
+        }else{
+            document.body.appendChild(divCards);
+        };
+        
+    }
+    
+</script>
+</html>

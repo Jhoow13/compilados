@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Word Sneak</title>
+    <link rel="stylesheet" href="../reset.css">
 </head>
 <style>
+    .container{
+        
+        width: 100%;
+        height: 800px;
+        margin: 15px; 
+    }
+
+    .bloco{
+        display: block;
+        margin: 5px;          
+    }
+
     .containerFlex{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;        
         margin: 5px;
-    }
-
+    }   
     .cards{
         width: 175px;
-        height: 150px;
-        border: 1px solid #000;
+        height: 150px;        
+        border-radius: 2px;
+        box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+    }
+    ul{        
+        margin: 5px;
     }
 </style>
 <body>
-    <ul id="listaPalavras"></ul>
-    <input type="text" id="tipoTema">
-    <input type="button" onclick="addTema()" value="Adicionar na lista">
-    <input type="button" onclick="geraCards()" value="Gerar Cards">
-    <div id="listaCartas" class="containerFlex"></div>
+    <div class="container">
+        <ul id="listaPalavras"></ul>
+        <input type="text" id="tipoTema" class="bloco">
+        <input type="button" onclick="addTema()" value="Adicionar na lista" class="bloco">
+        <input type="button" onclick="geraCards()" value="Gerar Cards" class="bloco">
+        <div id="listaCartas" class="containerFlex"></div>
+    </div>
 </body>
 <script>    
     var temas = [];
-    var temas2 = [];
+    var temas2 = ["a"];
 
     function addTema(){
         var nomeTema = document.querySelector("#tipoTema").value;
@@ -52,10 +70,19 @@
                 cards.appendChild(texto);
                 document.querySelector("#listaCartas").appendChild(cards);
                 cards.className = "cards";
+                cards.style.backgroundColor = geraCores();
             
-        }else{alert("Sua lista está vazia")}
-        
+        }else{alert("Sua lista está vazia")}        
     }
-    
+
+    function geraCores() {
+        var letras = '0123456789ABCDEF';
+        var cor = '#';
+        for (var i = 0; i < 6; i++ ) {
+            cor += letras[Math.floor(Math.random() * 16)];
+        }        
+        return cor;
+    }
+    geraCores();
 </script>
 </html>

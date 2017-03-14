@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Sneak</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="container">
+        <div class="containerFlex flexColuna">
+            <ul id="listaPalavras"></ul>
+            <input type="text" id="tipoTema" class="bloco input-size">
+            <input type="button" onclick="addTema()" value="Adicionar na lista" class="bloco input-size">
+            <input type="button" onclick="geraCards()" value="Gerar Cards" class="bloco input-size">
+        </div>
+        <div id="listaCartas" class="containerFlex"></div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
